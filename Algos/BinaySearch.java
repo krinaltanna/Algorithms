@@ -10,16 +10,16 @@ public class BinaySearch {
         int end = inputArr.length - 1;
         while (start <= end) {
             int mid = (start + end) / 2;
-            if (key == inputArr[mid]) {
+            if (key == inputArr[mid]) {                             /*Element found*/
                 return mid;
             }
-            if (mid == 0) {
+            if (mid == 0) {                                         /*Element not in array*/  
                 return 0;
             }
-            if (key < inputArr[mid]) {
+            if (key < inputArr[mid]) {                              /*Search the array to the left of 'mid'*/
                 end = mid - 1;
             } else {
-                start = mid + 1;
+                start = mid + 1;                                    /*Search the array to the right of 'mid'*/  
             }
         }
         return -1;
